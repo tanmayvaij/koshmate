@@ -2,7 +2,7 @@ import { transactions } from "@/data";
 
 export function Transactions() {
   return (
-    <div className="shadow-md rounded-xl border h-[500px] overflow-y-scroll p-5">
+    <div className="shadow-md rounded-xl border  overflow-y-scroll p-5">
       <table className="w-full">
         <thead>
           <tr>

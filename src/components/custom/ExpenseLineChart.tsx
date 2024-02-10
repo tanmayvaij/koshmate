@@ -20,16 +20,22 @@ import {
 import { transactions } from "@/data";
 
 export function ExpenseLineChart() {
-  const allDatesAmount: ExpenseMap = {};
-  const currDate = new Date().getDate();
-  for (let i = 1; i <= currDate; i++)
-    allDatesAmount[new Date(2025, 0, i).toDateString()] = 0;
+
+  const startDate = new Date(2025, 0, 1);
+  const currentDate = new Date()
+  
+  const testAllDatesAmount: ExpenseMap = {}
+
+  while ( startDate < currentDate ) {
+    testAllDatesAmount[startDate.toDateString()] = 0
+    startDate.setDate(startDate.getDate() + 1)    
+  }
 
   const summarizedData = Object.entries(
     transactions.reduce((acc, { date, amount }) => {
       acc[new Date(date).toDateString()] += amount;
       return acc;
-    }, allDatesAmount)
+    }, testAllDatesAmount)
   ).map(([date, amount]) => ({
     name: Number(date.split(" ")[2]),
     value: amount,

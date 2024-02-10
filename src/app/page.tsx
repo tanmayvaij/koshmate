@@ -10,13 +10,12 @@ const Page = () => {
       <IncomeDistributionPieChart />
       <ExpenseDistributionPieChart />
       <ExpenseBarChart />
-      
-      <ExpenseLineChart />
-      
-      <div className="col-span-2 row-span-1">
-      <Transactions />
+      <div className="col-span-3">
+        <ExpenseLineChart />
       </div>
-
+      <div className="col-span-3">
+        <Transactions />
+      </div>
     </div>
   );
 };

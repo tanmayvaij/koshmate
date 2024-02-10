@@ -180,7 +180,7 @@ export const transactions = [
     message: "activa no parking challan",
   },
   {
-    amount:  -120,
+    amount: -120,
     type: "food-and-dining",
     date: "01/19/2025",
     message: "1/2 kg chicken",
@@ -207,48 +207,144 @@ export const transactions = [
     amount: -229,
     type: "food-and-dining",
     date: "01/23/2025",
-    message: "street cafe pizza"
+    message: "street cafe pizza",
   },
   {
     amount: -180,
     type: "food-and-dining",
     date: "01/24/2025",
-    message: "pradeep farshan"
+    message: "pradeep farshan",
   },
   {
     amount: -68,
     type: "food-and-dining",
     date: "01/24/2025",
-    message: "4 ladi pav"
+    message: "4 ladi pav",
   },
   {
     amount: -30,
     type: "food-and-dining",
     date: "01/24/2025",
-    message: "250 gm matki"
+    message: "250 gm matki",
   },
   {
     amount: -300,
     type: "transportation",
     date: "01/25/2025",
-    message: "activa petrol"
+    message: "activa petrol",
   },
   {
     amount: -10,
     type: "transportation",
     date: "01/25/2025",
-    message: "okinawa tire air"
+    message: "okinawa tire air",
   },
   {
     amount: -40,
     type: "food-and-dining",
     date: "01/26/2025",
-    message: "wheat flour"
+    message: "wheat flour",
   },
   {
-    amount: -176,
+    amount: -88,
     type: "food-and-dining",
     date: "01/27/2025",
-    message: "eat club panner tikka"
+    message: "eat club panner tikka",
+  },
+  {
+    amount: 100,
+    type: "miscellaneous-income",
+    date: "01/27/2025",
+    message: "",
+  },
+  {
+    amount: -157.5,
+    type: "food-and-dining",
+    date: "01/28/2025",
+    message: "eat club mealfull roll",
+  },
+  {
+    amount: -69,
+    type: "medical",
+    date: "01/28/2025",
+    message: "vicks inhaler",
+  },
+  {
+    amount: -28,
+    type: "food-and-dining",
+    date: "01/29/2025",
+    message: "1/2 liter milk",
+  },
+  {
+    amount: -80,
+    type: "food-and-dining",
+    date: "01/31/2025",
+    message: "pradeep samosa",
+  },
+  {
+    amount: -28,
+    type: "food-and-dining",
+    date: "01/31/2025",
+    message: "1/2 liter milk",
+  },
+  {
+    amount: -105,
+    type: "medical",
+    date: "01/31/2025",
+    message: "himalaya septalin",
+  },
+  {
+    amount: -300,
+    type: "transportation",
+    date: "02/01/2025",
+    message: "activa petrol",
+  },
+  {
+    amount: -28,
+    type: "food-and-dining",
+    date: "02/04/2025",
+    message: "1/2 litre milk",
+  },
+  {
+    amount: 6000,
+    type: "salary",
+    date: "02/04/2025",
+    message: "",
+  },
+  {
+    amount: -408,
+    type: "food-and-dining",
+    date: "02/05/2025",
+    message: "eat sure mojo pizza mania",
+  },
+  {
+    amount: -21.94,
+    type: "others",
+    date: "02/06/2025",
+    message: "banking sms charges",
+  },
+  {
+    amount: -100,
+    type: "food-and-dining",
+    date: "02/06/2025",
+    message: "pradeep sweets, 1 samosa + 4 kachori",
+  },
+  {
+    amount: -28,
+    type: "food-and-dining",
+    date: "02/06/2025",
+    message: "1/2 litre milk",
+  },
+  {
+    amount: -1000,
+    type: "investments",
+    date: "02/08/2025",
+    message: "motilal oswal mutal fund SIP",
+  },
+  {
+    amount: -81,
+    type: "food-and-dining",
+    date: "02/10/2025",
+    message: "3 ladi pav, 1 pav bhaji masala, 10 coffee packets",
   },
 ];
