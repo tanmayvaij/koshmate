@@ -1,7 +1,7 @@
 "use client";
 
 import { TrendingUp } from "lucide-react";
-import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts";
+import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
 
 import {
   Card,
@@ -16,11 +16,9 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-
 import { transactions } from "@/data";
 
-export function ExpenseLineChart() {
-  
+export function ExpenseBarChart() {
   const allDatesAmount: ExpenseMap = {};
   const currDate = new Date().getDate();
   for (let i = 1; i <= currDate; i++)
@@ -28,6 +26,7 @@ export function ExpenseLineChart() {
 
   const summarizedData = Object.entries(
     transactions
+      .filter((transaction) => transaction.amount < 0)
       .reduce((acc, { date, amount }) => {
         acc[new Date(date).toDateString()] += amount;
         return acc;
@@ -36,53 +35,35 @@ export function ExpenseLineChart() {
     name: Number(date.split(" ")[2]),
     value: Math.abs(amount),
   }));
-  
+
   return (
-    <Card className="shadow-none col-span-1 ">
+    <Card className="shadow-none">
       <CardHeader>
-        <CardTitle>Expenses per day</CardTitle>
-        <CardDescription>January 2025</CardDescription>
+        <CardTitle>Bar Chart</CardTitle>
+        <CardDescription>January - June 2024</CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer config={{}}>
-          <LineChart
-            accessibilityLayer
-            data={summarizedData}
-            margin={{
-              left: 12,
-              right: 12,
-            }}
-          >
+          <BarChart accessibilityLayer data={summarizedData}>
             <CartesianGrid vertical={false} />
             <YAxis
               dataKey="value"
               tickLine={false}
               axisLine={false}
-              tickFormatter={(value) => `₹ ${value}`} 
+              tickFormatter={(value) => `₹ ${value}`}
             />
             <XAxis
               dataKey="name"
               tickLine={false}
+              tickMargin={10}
               axisLine={false}
-              tickMargin={8}
             />
             <ChartTooltip
               cursor={false}
               content={<ChartTooltipContent hideLabel />}
             />
-            <Line
-              dataKey="value"
-              type="linear"
-              stroke="tomato"
-              strokeWidth={2}
-              dot={{
-                fill: "tomato",
-              }}
-              activeDot={{
-                r: 6,
-              }}
-            />
-          </LineChart>
+            <Bar dataKey="value" fill="tomato" radius={5} />
+          </BarChart>
         </ChartContainer>
       </CardContent>
       <CardFooter className="flex-col items-start gap-2 text-sm">
