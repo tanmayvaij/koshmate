@@ -20,23 +20,32 @@ import {
 import { transactions } from "@/data";
 
 export function ExpenseLineChart() {
-  
   const allDatesAmount: ExpenseMap = {};
   const currDate = new Date().getDate();
   for (let i = 1; i <= currDate; i++)
     allDatesAmount[new Date(2025, 0, i).toDateString()] = 0;
 
   const summarizedData = Object.entries(
-    transactions
-      .reduce((acc, { date, amount }) => {
-        acc[new Date(date).toDateString()] += amount;
-        return acc;
-      }, allDatesAmount)
+    transactions.reduce((acc, { date, amount }) => {
+      acc[new Date(date).toDateString()] += amount;
+      return acc;
+    }, allDatesAmount)
   ).map(([date, amount]) => ({
     name: Number(date.split(" ")[2]),
-    value: Math.abs(amount),
+    value: amount,
   }));
-  
+
+  const data: { name: number; value: number }[] = [];
+  let currAmount = 82342.06;
+  summarizedData.forEach((transaction) => {
+    data.push({
+      name: transaction.name,
+      value: currAmount + transaction.value,
+    });
+
+    currAmount += transaction.value;
+  });
+
   return (
     <Card className="shadow-none col-span-1 ">
       <CardHeader>
@@ -47,10 +56,10 @@ export function ExpenseLineChart() {
         <ChartContainer config={{}}>
           <LineChart
             accessibilityLayer
-            data={summarizedData}
+            data={data}
             margin={{
-              left: 12,
-              right: 12,
+              // left: 12,
+              // right: 12,
             }}
           >
             <CartesianGrid vertical={false} />
@@ -58,7 +67,8 @@ export function ExpenseLineChart() {
               dataKey="value"
               tickLine={false}
               axisLine={false}
-              tickFormatter={(value) => `₹ ${value}`} 
+              domain={[80000, "dataMax"]}
+              tickFormatter={(value) => `₹${value}`}
             />
             <XAxis
               dataKey="name"

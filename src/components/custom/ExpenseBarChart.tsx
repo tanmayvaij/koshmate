@@ -22,17 +22,17 @@ export function ExpenseBarChart() {
   const allDatesAmount: ExpenseMap = {};
   const currDate = new Date().getDate();
   for (let i = 1; i <= currDate; i++)
-    allDatesAmount[new Date(2025, 0, i).toDateString()] = 0;
+    allDatesAmount[new Date(2025, 0, i).toLocaleDateString()] = 0;
 
   const summarizedData = Object.entries(
     transactions
       .filter((transaction) => transaction.amount < 0)
       .reduce((acc, { date, amount }) => {
-        acc[new Date(date).toDateString()] += amount;
+        acc[new Date(date).toLocaleDateString()] += amount;
         return acc;
       }, allDatesAmount)
   ).map(([date, amount]) => ({
-    name: Number(date.split(" ")[2]),
+    name: date.split("/")[1],
     value: Math.abs(amount),
   }));
 
