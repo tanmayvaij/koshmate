@@ -180,9 +180,21 @@ export const transactions = [
     message: "activa no parking challan",
   },
   {
-    amount: -1500,
+    amount: -120,
+    type: "food-and-dining",
+    date: "01/19/2025",
+    message: "1/2 kg chicken",
+  },
+  {
+    amount: -1505.9,
     type: "education",
     date: "01/20/2025",
     message: "dypiu bca convocation fees",
+  },
+  {
+    amount: -28,
+    type: "food-and-dining",
+    date: "01/21/2025",
+    message: "1/2 litre cow milk",
   },
 ];
