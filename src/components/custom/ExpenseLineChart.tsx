@@ -47,7 +47,7 @@ export function ExpenseLineChart() {
   });
 
   return (
-    <Card className="shadow-none col-span-1 ">
+    <Card className="col-span-1 ">
       <CardHeader>
         <CardTitle>Expenses per day</CardTitle>
         <CardDescription>January 2025</CardDescription>
@@ -58,8 +58,8 @@ export function ExpenseLineChart() {
             accessibilityLayer
             data={data}
             margin={{
-              // left: 12,
-              // right: 12,
+              left: 12,
+              right: 12,
             }}
           >
             <CartesianGrid vertical={false} />

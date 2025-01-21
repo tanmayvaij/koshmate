@@ -46,7 +46,7 @@ export const ExpenseDistributionPieChart = () => {
   }));
 
   return (
-    <Card className="flex flex-col shadow-none ">
+    <Card className="flex flex-col">
       <CardHeader className="items-center pb-0">
         <CardTitle>Expenses % by Category</CardTitle>
         <CardDescription>January 2025</CardDescription>
