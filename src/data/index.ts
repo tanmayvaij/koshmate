@@ -180,7 +180,7 @@ export const transactions = [
     message: "activa no parking challan",
   },
   {
-    amount: -120,
+    amount:  -120,
     type: "food-and-dining",
     date: "01/19/2025",
     message: "1/2 kg chicken",
@@ -196,5 +196,17 @@ export const transactions = [
     type: "food-and-dining",
     date: "01/21/2025",
     message: "1/2 litre cow milk",
+  },
+  {
+    amount: -160,
+    type: "transportation",
+    date: "01/22/2025",
+    message: "activa petrol",
+  },
+  {
+    amount: -229,
+    type: "food-and-dining",
+    date: "01/23/2025",
+    message: "street cafe pizza"
   },
 ];
