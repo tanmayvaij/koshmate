@@ -209,4 +209,46 @@ export const transactions = [
     date: "01/23/2025",
     message: "street cafe pizza"
   },
+  {
+    amount: -180,
+    type: "food-and-dining",
+    date: "01/24/2025",
+    message: "pradeep farshan"
+  },
+  {
+    amount: -68,
+    type: "food-and-dining",
+    date: "01/24/2025",
+    message: "4 ladi pav"
+  },
+  {
+    amount: -30,
+    type: "food-and-dining",
+    date: "01/24/2025",
+    message: "250 gm matki"
+  },
+  {
+    amount: -300,
+    type: "transportation",
+    date: "01/25/2025",
+    message: "activa petrol"
+  },
+  {
+    amount: -10,
+    type: "transportation",
+    date: "01/25/2025",
+    message: "okinawa tire air"
+  },
+  {
+    amount: -40,
+    type: "food-and-dining",
+    date: "01/26/2025",
+    message: "wheat flour"
+  },
+  {
+    amount: -176,
+    type: "food-and-dining",
+    date: "01/27/2025",
+    message: "eat club panner tikka"
+  },
 ];
