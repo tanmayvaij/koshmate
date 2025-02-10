@@ -43,7 +43,7 @@ export const IncomeDistributionPieChart = () => {
     name: type,
     value: (Math.abs(amount) / totalExpense) * 100,
     fill: COLORS[id],
-  }));
+  }))
 
   return (
     <Card className="flex flex-col">
