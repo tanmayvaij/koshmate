@@ -347,4 +347,10 @@ export const transactions = [
     date: "02/10/2025",
     message: "3 ladi pav, 1 pav bhaji masala, 10 coffee packets",
   },
+  {
+    amount: -28,
+    type: "food-and-dining",
+    date: "02/12/2025",
+    message: "1/2 litre milk",
+  },
 ];
