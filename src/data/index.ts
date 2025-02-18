@@ -353,4 +353,34 @@ export const transactions = [
     date: "02/12/2025",
     message: "1/2 litre milk",
   },
+  {
+    amount: -800.90,
+    type: "recharge-bill",
+    date: "02/13/2025",
+    message: "jio recharge",
+  },
+  {
+    amount: 13,
+    type: "miscellaneous-income",
+    date: "02/13/2025",
+    message: "google pay cash back",
+  },
+  {
+    amount: -599,
+    type: "shopping",
+    date: "02/13/2025",
+    message: "jbl headphones",
+  },
+  {
+    amount: 1000,
+    type: "miscellaneous-income",
+    date: "02/13/2025",
+    message: "",
+  },
+  {
+    amount: -70,
+    type: "education",
+    date: "02/16/2025",
+    message: "iit bombay nptel ceritifactes",
+  },
 ];
