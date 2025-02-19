@@ -383,4 +383,22 @@ export const transactions = [
     date: "02/16/2025",
     message: "iit bombay nptel ceritifactes",
   },
+  {
+    amount: -140,
+    type: "food-and-dining",
+    date: "02/16/2025",
+    message: "geeta pav bhaji",
+  },
+  {
+    amount: -20,
+    type: "food-and-dining",
+    date: "02/16/2025",
+    message: "coke pet bottle",
+  },
+  {
+    amount: -160,
+    type: "food-and-dining",
+    date: "02/16/2025",
+    message: "amul ice cream family pack",
+  },
 ];
