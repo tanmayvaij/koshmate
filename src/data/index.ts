@@ -401,4 +401,10 @@ export const transactions = [
     date: "02/16/2025",
     message: "amul ice cream family pack",
   },
+  {
+    amount: -200,
+    type: "transportation",
+    date: "02/17/2025",
+    message: "meteor petrol",
+  },
 ];
