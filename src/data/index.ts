@@ -413,4 +413,10 @@ export const transactions = [
     date: "02/18/2025",
     message: "meteor petrol",
   },
+  {
+    amount: -20,
+    type: "food-and-dining",
+    date: "02/22/2025",
+    message: "meteor petrol",
+  },
 ];
